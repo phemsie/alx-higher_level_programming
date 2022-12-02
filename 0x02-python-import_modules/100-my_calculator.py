@@ -1,14 +1,45 @@
 #!/usr/bin/python3
+""" Write a program that imports all functions from
+the file calculator_1.py and handles basic operations.
+"""
 if __name__ == "__main__":
-    from sys import argv
-    from calculator_1 import add, sub, mul, div
-    if len(argv) != 4:
-        print("Usage:", argv[0], "<a> <operator> <b>")
-        exit(1)
-        a, b = int(argv[1]), int(argv[3])
-        operator = argv[2]
-        math = {"+": add, "-": sub, "*": mul, "/": div}
-        if operator not in math:
-            print("Unknown operator. Available operators: +, -, * and /")
-            exit(1)
-            print("{:d} {} {:d} = {:d}".format(a, operator, b, math[operator](a, b)))
+import sys
+from calculator_1 import add, sub, mul, div
+if len(sys.argv) != 4:
+    print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+    exit(1)
+    if sys.argv[2] == "+":
+        sum = add(int(sys.argv[1]), int(sys.argv[3]))
+        print(
+                "{} {} {} = {}".format(
+                    sys.argv[1],
+                    sys.argv[2],
+                    sys.argv[3],
+                    sum))
+            elif sys.argv[2] == "-":
+                sub_ = sub(int(sys.argv[1]), int(sys.argv[3]))
+                print(
+                        "{} {} {} = {}".format(
+                            sys.argv[1],
+                            sys.argv[2],
+                            sys.argv[3],
+                            sub_))
+                    elif sys.argv[2] == "*":
+                        mul_ = mul(int(sys.argv[1]), int(sys.argv[3]))
+                        print(
+                                "{} {} {} = {}".format(
+                                    sys.argv[1],
+                                    sys.argv[2],
+                                    sys.argv[3],
+                                    mul_))
+                            elif sys.argv[2] == "/":
+                                div_ = div(int(sys.argv[1]), int(sys.argv[3]))
+                                print(
+                                        "{} {} {} = {}".format(
+                                            sys.argv[1],
+                                            sys.argv[2],
+                                            sys.argv[3],
+                                            div_))
+                                    else:
+                                        print("Unknown operator. Available operators: +, -, * and /")
+                                        exit(1)
