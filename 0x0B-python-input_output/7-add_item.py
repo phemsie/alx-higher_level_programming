@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 """
-script adds all arguments to a Python list, and then save them to a file
+This script will allow you to dynamically save items
+to a persistent Python list object
 """
 
 
 from sys import argv
-
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
-filename = "add_item.json"
-MyList = argv[1:]
-try:
-    my_obj = load_from_json_file(filename)
-    my_obj += MyList
-    save_to_json_file(my_obj, filename)
-except:
-    my_obj = MyList
-    save_to_json_file(my_obj, filename)
+if __name__ == "__main__":
+    try:
+        list_obj = load_from_json_file("add_item.json")
+    except FileNotFoundError:
+        list_obj = []
+    argc = len(argv)
+    if argc > 1:
+        for i in range(1, argc):
+            list_obj.append(argv[i])
+    save_to_json_file(list_obj, "add_item.json")
