@@ -1,21 +1,3 @@
-
-Sign up
-AgeseVictor
-/
-alx-higher_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-higher_level_programming/0x0B-python-input_output/7-add_item.py
-@AgeseVictor
-AgeseVictor help
- 1 contributor
-Executable File  20 lines (16 sloc)  497 Bytes
 #!/usr/bin/python3
 """
 script adds all arguments to a Python list, and then save them to a file
