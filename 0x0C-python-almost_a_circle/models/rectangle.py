@@ -1,21 +1,3 @@
-
-Sign up
-AgeseVictor
-/
-alx-higher_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-alx-higher_level_programming/0x0C-python-almost_a_circle/models/rectangle.py
-@AgeseVictor
-AgeseVictor hope in God
- 1 contributor
-110 lines (91 sloc)  3.19 KB
 #!/usr/bin/python3
 """ module that defines a class Rectangle that inherits from Base """
 
