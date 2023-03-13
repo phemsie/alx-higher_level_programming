@@ -9,4 +9,4 @@ function factorial (num) {
   }
   return num * factorial(num - 1);
 }
-console.log(factorial(parseInt(myArgs[0])))
+console.log(factorial(parseInt(myArgs[0]));)
