@@ -1,0 +1,2 @@
+Complexity of your algorithm for find_peak function
+O(nlog(n))
